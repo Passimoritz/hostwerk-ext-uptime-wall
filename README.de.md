@@ -1,3 +1,5 @@
+![Uptime-Wand](banner.svg)
+
 # Uptime-Wand
 
 Alle Erreichbarkeits-Prüfungen groß und farbig – mit Verlauf der letzten Stunden, Verfügbarkeit und Antwortzeit. Für einen zweiten Bildschirm oder als Kachel.

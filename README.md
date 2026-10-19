@@ -1,3 +1,5 @@
+![Uptime wall](banner.svg)
+
 # Uptime wall
 
 All uptime checks big and colourful – with the history of the last hours, availability and response time. For a second screen or as a tile.

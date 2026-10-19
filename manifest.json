@@ -2,6 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Passimoritz/hostwerk-public/main/sdk/manifest.schema.json",
   "id": "uptime-wall",
   "color": "#16a34a",
+  "category": "monitoring",
   "name": {
     "de": "Uptime-Wand",
     "en": "Uptime wall"
@@ -52,10 +53,11 @@
     "file": "widget/index.html",
     "size": "third"
   },
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Hostwerk",
   "homepage": "https://github.com/Passimoritz/hostwerk-ext-uptime-wall",
   "license": "MIT",
   "icon": "icon.svg",
+  "banner": "banner.svg",
   "hostwerk": ">=2.9.0"
 }
