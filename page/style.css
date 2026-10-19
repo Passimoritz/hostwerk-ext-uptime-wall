@@ -5,3 +5,5 @@
 .up-num { font-size: 28px; font-weight: 700; line-height: 1.1; }
 .up-spark { width: 100%; height: 28px; }
 .up-spark polyline { fill: none; stroke: var(--accent); stroke-width: 1.5; }
+.up-link code { font-size: 12px; background: var(--surface-2); padding: 4px 8px; border-radius: 6px; }
+.up-check { flex-wrap: wrap; }
