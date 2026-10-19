@@ -1,0 +1,42 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Passimoritz/hostwerk-public/main/sdk/manifest.schema.json",
+  "id": "uptime-wall",
+  "color": "#16a34a",
+  "name": {
+    "de": "Uptime-Wand",
+    "en": "Uptime wall"
+  },
+  "description": {
+    "de": "Alle Erreichbarkeits-Prüfungen groß und farbig – mit Verlauf der letzten Stunden, Verfügbarkeit und Antwortzeit. Für einen zweiten Bildschirm oder als Kachel.",
+    "en": "All uptime checks big and colourful – with the history of the last hours, availability and response time. For a second screen or as a tile."
+  },
+  "permissions": [
+    "read:live"
+  ],
+  "page": {
+    "title": {
+      "de": "Uptime-Wand",
+      "en": "Uptime wall"
+    },
+    "description": {
+      "de": "Erreichbarkeit aller Überwachungen auf einen Blick.",
+      "en": "Uptime of all monitors at a glance."
+    },
+    "icon": "activity",
+    "file": "page/index.html"
+  },
+  "widget": {
+    "title": {
+      "de": "Uptime-Wand",
+      "en": "Uptime wall"
+    },
+    "file": "widget/index.html",
+    "size": "third"
+  },
+  "version": "1.0.0",
+  "author": "Hostwerk",
+  "homepage": "https://github.com/Passimoritz/hostwerk-ext-uptime-wall",
+  "license": "MIT",
+  "icon": "icon.svg",
+  "hostwerk": ">=2.9.0"
+}

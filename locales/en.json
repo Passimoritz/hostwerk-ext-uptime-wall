@@ -1,0 +1,12 @@
+{
+  "emptyTitle": "No monitors yet",
+  "emptyText": "Under Production → Monitoring you add addresses that Hostwerk checks regularly.",
+  "state.up": "up",
+  "state.down": "down",
+  "state.pending": "not checked yet",
+  "uptime": "Availability in 24 hours",
+  "avg": "avg {ms} ms",
+  "someDown": "{n} down",
+  "allUp": "Everything is up",
+  "summary": "{up} of {total} checks are up"
+}

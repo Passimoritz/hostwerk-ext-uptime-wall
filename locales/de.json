@@ -1,0 +1,12 @@
+{
+  "emptyTitle": "Noch keine Überwachung",
+  "emptyText": "Unter Livebetrieb → Überwachung legst du Adressen an, die Hostwerk regelmäßig prüft.",
+  "state.up": "erreichbar",
+  "state.down": "nicht erreichbar",
+  "state.pending": "noch nicht geprüft",
+  "uptime": "Verfügbarkeit in 24 Stunden",
+  "avg": "Ø {ms} ms",
+  "someDown": "{n} nicht erreichbar",
+  "allUp": "Alles erreichbar",
+  "summary": "{up} von {total} Prüfungen erreichbar"
+}
