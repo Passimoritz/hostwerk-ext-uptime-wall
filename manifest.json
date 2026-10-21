@@ -43,7 +43,14 @@
         },
         "icon": "globe"
       }
-    ]
+    ],
+    "nav": {
+      "group": "monitoring",
+      "groupTitle": {
+        "de": "Überwachung",
+        "en": "Monitoring"
+      }
+    }
   },
   "widget": {
     "title": {
@@ -53,11 +60,29 @@
     "file": "widget/index.html",
     "size": "third"
   },
-  "version": "1.2.0",
+  "version": "1.3.0",
   "author": "Hostwerk",
   "homepage": "https://github.com/Passimoritz/hostwerk-ext-uptime-wall",
   "license": "MIT",
   "icon": "icon.svg",
   "banner": "banner.svg",
-  "hostwerk": ">=2.9.0"
+  "hostwerk": ">=2.9.0",
+  "contributes": {
+    "shortcuts": [
+      {
+        "id": "open",
+        "title": {
+          "de": "Uptime-Wand öffnen",
+          "en": "Open uptime wall"
+        },
+        "keys": "ctrl+alt+u",
+        "action": "wall"
+      }
+    ]
+  },
+  "allowExtensions": {
+    "*": [
+      "tabs"
+    ]
+  }
 }

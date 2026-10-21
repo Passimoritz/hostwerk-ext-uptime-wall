@@ -43,5 +43,9 @@
   "writeNow": "Jetzt schreiben",
   "writtenToast": "Statusseite geschrieben",
   "nowOn": "Statusseite ist öffentlich",
-  "nowOff": "Statusseite ist aus"
+  "nowOff": "Statusseite ist aus",
+  "addCheck": "Prüfung anlegen",
+  "outages": "{n}× ausgefallen",
+  "loadFailed": "Die Prüfungen konnten nicht geladen werden.",
+  "retry": "Erneut versuchen"
 }

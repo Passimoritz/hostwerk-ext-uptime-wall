@@ -43,5 +43,9 @@
   "writeNow": "Write now",
   "writtenToast": "Status page written",
   "nowOn": "Status page is public",
-  "nowOff": "Status page is off"
+  "nowOff": "Status page is off",
+  "addCheck": "Add a check",
+  "outages": "down {n}×",
+  "loadFailed": "Couldn’t load the checks.",
+  "retry": "Try again"
 }

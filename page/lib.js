@@ -13,6 +13,14 @@
   function outages(history) { let n = 0; let prev = 1; for (const p of history || []) { if (!p[1] && prev) n++; prev = p[1]; } return n; }
   /** Gesamtbild: alle oben? */
   function overall(checks) { const list = checks || []; const down = list.filter((c) => state(c) === 'down').length; return { total: list.length, down, up: list.filter((c) => state(c) === 'up').length, level: down ? 'err' : list.length ? 'ok' : 'none' }; }
-  const api = { state, spark, outages, overall };
+  /** Textalternative zur Verlaufslinie: Verfügbarkeit, Ø-Antwortzeit, Ausfälle (Formatierer kommen von der Seite). */
+  function describe(c, f) {
+    const parts = [`${f.uptime}: ${f.pct(c.uptime24)}`];
+    if (c.avgMs != null) parts.push(f.avg(c.avgMs));
+    const n = outages(c.history);
+    if (n) parts.push(f.outages(n));
+    return parts.join(' · ');
+  }
+  const api = { state, spark, outages, overall, describe };
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.Uptime = api;
 })(typeof window !== 'undefined' ? window : globalThis);
