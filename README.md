@@ -10,6 +10,7 @@ An official [Hostwerk](https://github.com/Passimoritz/hostwerk-public) extension
 
 ## Features
 
+- **Where:** Go live → Operate → Uptime wall and the dashboard tile – no own sidebar entry since 1.4.0; the full page stays under Extensions → Open
 - **Wall:** every check as a tile with state, availability over 24 hours, average response time, number of outages and a history line (with a text alternative for screen readers)
 - **Public status page:** a secret link (via remote access) or `index.html` + `status.json` written into a website folder every minute. You choose which checks appear and under which name; addresses stay hidden unless you want to show them. You confirm every change.
 - No checks yet? A button leads straight to *Live → Monitoring*.

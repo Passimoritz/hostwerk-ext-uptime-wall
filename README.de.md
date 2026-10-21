@@ -10,6 +10,7 @@ Eine offizielle [Hostwerk](https://github.com/Passimoritz/hostwerk-public)-Erwei
 
 ## Funktionen
 
+- **Wo:** Livebetrieb → Betrieb → Uptime-Wand und Übersichtskachel – seit 1.4.0 ohne eigenen Seitenleisten-Eintrag; die ganze Seite bleibt unter Erweiterungen → Öffnen
 - **Wand:** jede Prüfung als Kachel mit Zustand, Verfügbarkeit in 24 Stunden, Ø-Antwortzeit, Zahl der Ausfälle und Verlaufslinie (mit Textalternative für Bildschirmleser)
 - **Öffentliche Statusseite:** ein geheimer Link (über den Fernzugriff) oder `index.html` + `status.json` jede Minute in einen Website-Ordner. Du wählst, welche Prüfungen erscheinen und unter welchem Namen; Adressen bleiben verborgen, außer du willst sie zeigen. Jede Änderung bestätigst du.
 - Noch keine Prüfung? Ein Knopf führt direkt zu *Livebetrieb → Überwachung*.
