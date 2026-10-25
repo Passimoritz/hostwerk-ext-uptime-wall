@@ -2,6 +2,8 @@
 
 # Uptime-Wand
 
+> **Aufgegangen in der „Status-Wand“ (2.0):** Erreichbarkeit und öffentliche Statusseite sind jetzt Reiter der Status-Wand. Hostwerk installiert sie von selbst und entfernt diese Erweiterung. Hier gibt es keine neuen Fassungen mehr.
+
 Alle Erreichbarkeits-Prüfungen groß und farbig – mit Verlauf der letzten Stunden, Verfügbarkeit, Antwortzeit und Ausfällen. Für einen zweiten Bildschirm, als Kachel oder als öffentliche Statusseite für deine Besucher.
 
 [English](README.md) · Offizielle [Hostwerk](https://github.com/Passimoritz/hostwerk-public)-Erweiterung (läuft abgeschottet, ab Hostwerk 2.9)

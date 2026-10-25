@@ -2,6 +2,8 @@
 
 # Uptime wall
 
+> **Merged into the “Status wall” (2.0):** reachability and the public status page are now tabs of the status wall. Hostwerk installs it by itself and removes this extension. There are no new versions here.
+
 All uptime checks big and colourful – with the history of the last hours, availability, response time and outages. For a second screen, as a tile or as a public status page for your visitors.
 
 [Deutsch](README.de.md) · An official [Hostwerk](https://github.com/Passimoritz/hostwerk-public) extension (runs sandboxed, Hostwerk 2.9 or newer)
