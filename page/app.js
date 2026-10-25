@@ -3,6 +3,9 @@ const { html, t } = Hostwerk;
 const U = Uptime;
 const CLS = { up: 'ok', down: 'err', pending: '' };
 const pct = (n) => (n == null ? '–' : `${Hostwerk.fmt.number(n)} %`);
+// Bewegung wie in Hostwerk (SDK 3.6): Kacheln erscheinen beim ersten Mal nacheinander, der leere Zustand kommt von Hostwerk.
+// Ältere Hostwerk-Versionen kennen ui.empty und die hw-*-Klassen nicht – dann bleibt es wie bisher.
+let firstTiles = true;
 
 function failed(e) {
   // Fehler nie als leeres „–“ stehen lassen: kurz sagen, was los ist, und „Erneut versuchen“ anbieten
@@ -15,7 +18,8 @@ async function load() {
   const checks = Array.isArray(d && d.checks) ? d.checks : [];
   const o = U.overall(checks);
   if (!checks.length) {
-    Hostwerk.render('#app', html`<div class="empty"><h3>${t('emptyTitle')}</h3><p>${t('emptyText')}</p><div class="empty-action"><button type="button" class="btn primary" id="add">${t('addCheck')}</button></div></div>`);
+    const add = html`<button type="button" class="btn primary" id="add">${t('addCheck')}</button>`;
+    Hostwerk.render('#app', Hostwerk.ui.empty ? Hostwerk.ui.empty({ title: t('emptyTitle'), text: t('emptyText'), icon: Hostwerk.raw(PULSE), action: add }) : html`<div class="empty"><h3>${t('emptyTitle')}</h3><p>${t('emptyText')}</p><div class="empty-action">${add}</div></div>`);
     document.getElementById('add').addEventListener('click', () => Hostwerk.navigate('/live/monitor'));
     return;
   }
@@ -31,8 +35,11 @@ async function load() {
   };
   if (Hostwerk.embed === 'widget') { Hostwerk.render('#app', html`<div class="stack" style="gap: var(--sp-2, 8px)"><div class="small ${o.down ? 'c-err' : 'c-ok'}">${o.down ? t('someDown', { n: o.down }) : t('allUp')}</div>${checks.slice(0, 6).map((c) => tile(c, false))}</div>`); return; }
   Hostwerk.render('#app', html`<div class="callout ${o.down ? 'err' : 'ok'}" style="margin-bottom: var(--sp-3, 12px)"><div class="callout-body"><b class="callout-title">${o.down ? t('someDown', { n: o.down }) : t('allUp')}</b>${t('summary', { up: o.up, total: o.total })}</div></div>
-    <div class="grid grid-3">${checks.map((c) => tile(c, true))}</div>`);
+    <div class="grid grid-3${firstTiles ? ' hw-stagger' : ''}">${checks.map((c) => tile(c, true))}</div>`);
+  firstTiles = false;
 }
+/** Herzschlag (Lucide „activity“, ISC) für den leeren Zustand */
+const PULSE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg>';
 // Alle 30 s nachladen – nicht, solange Seite oder Übersicht verborgen sind; beim Zurückkommen sofort
 Hostwerk.ready().then(() => {
   load();

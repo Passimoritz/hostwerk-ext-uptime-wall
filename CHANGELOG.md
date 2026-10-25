@@ -1,3 +1,7 @@
+## 1.5.0
+
+- Hostwerk’s animations (SDK 3.6): the tiles rise one after another the first time, and without checks the page shows Hostwerk’s empty state with “Add check”. Everything stops with “Reduce animations”. / Hostwerks Animationen (SDK 3.6): Die Kacheln erscheinen beim ersten Mal nacheinander, ohne Prüfungen zeigt die Seite Hostwerks leeren Zustand mit „Prüfung hinzufügen“. Alles ruht bei „Animationen reduzieren“.
+
 ## 1.4.1
 
 - New animated icon and banner in the common Hostwerk style (isometric block). / Neues animiertes Symbol und Banner im gemeinsamen Hostwerk-Stil (isometrischer Block).
